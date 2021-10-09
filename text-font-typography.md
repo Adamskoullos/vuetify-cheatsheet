@@ -1,4 +1,4 @@
-# Text-Font-Typograhpy
+# Text-Font-Typography
 
 **Background Color**: `blue`
 

@@ -1,6 +1,6 @@
 # vuetify-cheatsheet
 
-- [Typography-Text-Font]()
+- [Typography-Text-Font](https://github.com/Adamskoullos/vuetify-cheatsheet/blob/main/text-font-typography.md)
 - [Flex]()
 - [Spacing]()
 - [Display]()
