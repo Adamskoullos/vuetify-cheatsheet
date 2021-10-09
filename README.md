@@ -1,9 +1,8 @@
 # vuetify-cheatsheet
 
 - [Typography-Text-Font](https://github.com/Adamskoullos/vuetify-cheatsheet/blob/main/text-font-typography.md)
-- [Flex]()
+- [Display & Flex](https://github.com/Adamskoullos/vuetify-cheatsheet/blob/main/flex.md)
 - [Spacing](https://github.com/Adamskoullos/vuetify-cheatsheet/blob/main/spacing.md)
-- [Display]()
 - [Grid]()
 - [Buttons]()
 - [Card]()
