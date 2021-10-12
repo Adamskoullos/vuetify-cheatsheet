@@ -1,6 +1,6 @@
 # Navigation
 
-There are two main navigation structures:
+There are two main navigation wrapping tags:
 
 **v-app-bar** Used for an applications main navigation and fully featured
 
@@ -59,3 +59,17 @@ Features that `v-app-bar` & `v-toolbar` have:
 - `src`
 - `tile` > **removes border-radius**
 - `width`
+
+---
+
+Inside **v-app-bar** and **v-toolbar** we use the same internal components:
+
+- **`v-toolbar-title`**
+
+- **`v-spacer`**
+
+- **`v-toolbar-items`** > This houses all navigation items:
+  - `v-btn`
+  - `v-icon`
+
+---
