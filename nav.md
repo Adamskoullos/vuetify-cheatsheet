@@ -74,7 +74,11 @@ Inside **v-app-bar** and **v-toolbar** we use the same internal components:
 
 ---
 
-**v-navigation-drawer**:
+Just outside of the **v-app-bar** we can place the **`v-navigation-drawer`**. This is the side nav that can be configured to slide in and out from either the left or right.
+
+`v-navigation-drawer's` by default are set to close on `click-away` events.
+
+The below example shows the `v-navigation-drawer` being used as the nav for mobile screens:
 
 ---
 
@@ -85,13 +89,16 @@ Example:
   <div>
     <v-app-bar>
       <v-toolbar-title>Logo</v-toolbar-title>
+
       <v-spacer></v-spacer>
+
       <!-- Mobile burger button to open drawer menu-->
       <span class="hidden-sm-and-up">
         <v-btn @click.stop="drawer = !drawer">
           <v-icon>some-icon</v-icon>
         </v-btn>
       </span>
+
       <!-- Main nav bar -->
       <v-toolbar-items>
         <v-btn :to="/one" text>
@@ -104,6 +111,7 @@ Example:
         </v-btn>
       </v-toolbar-items>
     </v-app-bar>
+
     <!-- Navigation drawer for mobile screens -->
     <v-navigation-drawer v-model="drawer" absolute temporary right>
       <v-list>
