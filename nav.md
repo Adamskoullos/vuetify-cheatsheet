@@ -64,7 +64,7 @@ Features that `v-app-bar` & `v-toolbar` have:
 
 Inside **v-app-bar** and **v-toolbar** we use the same internal components:
 
-- **`v-toolbar-title`**
+- **`v-toolbar-title`** > Logo
 
 - **`v-spacer`**
 
@@ -73,3 +73,67 @@ Inside **v-app-bar** and **v-toolbar** we use the same internal components:
   - `v-icon`
 
 ---
+
+**v-navigation-drawer**:
+
+---
+
+Example:
+
+```html
+<template>
+  <div>
+    <v-app-bar>
+      <v-toolbar-title>Logo</v-toolbar-title>
+      <v-spacer></v-spacer>
+      <!-- Mobile burger button to open drawer menu-->
+      <span class="hidden-sm-and-up">
+        <v-btn @click.stop="drawer = !drawer">
+          <v-icon>some-icon</v-icon>
+        </v-btn>
+      </span>
+      <!-- Main nav bar -->
+      <v-toolbar-items>
+        <v-btn :to="/one" text>
+          <v-icon small left>some-icon</v-icon>
+          Page One
+        </v-btn>
+        <v-btn :to="/two" text>
+          <v-icon small left>some-icon</v-icon>
+          Page Two
+        </v-btn>
+      </v-toolbar-items>
+    </v-app-bar>
+    <!-- Navigation drawer for mobile screens -->
+    <v-navigation-drawer v-model="drawer" absolute temporary right>
+      <v-list>
+        <v-list-item
+          v-for="item in items"
+          :key="item.title"
+          :to="item.link"
+          link
+        >
+          <V-list-item-icon>
+            <v-icon>fa-{{ item.icon }}</v-icon>
+          </V-list-item-icon>
+          {{ item.title }}
+        </v-list-item>
+      </v-list>
+    </v-navigation-drawer>
+  </div>
+</template>
+```
+
+Then in the script we add the `drawer` and `items` properties:
+
+```js
+data(){
+  return{
+    drawer: false,
+    items: [
+      {title: 'One', link: 'one', icon: 'some-icon'},
+      {title: 'Two', link: 'two', icon: 'some-icon'}
+    ]
+  }
+}
+```
