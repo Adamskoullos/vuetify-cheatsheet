@@ -69,7 +69,39 @@ Inside **v-app-bar** and **v-toolbar** we use the same internal components:
 - **`v-spacer`**
 
 - **`v-toolbar-items`** > This houses all navigation items:
-  - `v-btn`
+
+  - **`v-btn`**
+
+    - `absolute` > overides `app` position: fixed
+    - `block`
+    - `bottom` > aligns component towards the bottom
+    - `color`
+    - `dark`
+    - `depressed` > removes box-shadow
+    - `disabled`
+    - `elavation` > box-shadow between 1-24
+    - `exact` > Prop: to only highlight when exact route is active
+    - `exact-active-class` > use to configure class for active tab
+    - `fab` > floating-action-button (circle)
+    - `fixed`
+    - `href`
+    - `icon` > button becomes round and the `text` prop is added
+    - `input-value` > controls buttons active state
+    - `large`
+    - `left` > position
+    - `light`
+    - `link` > this is added if the button has `to` or `href`
+    - `loading` > adds a loading icon animation
+    - `max-height`
+    - `max-width`
+    - `min-height`
+    - `min-width`
+    - `nuxt` > specifies the lik is a `NuxtLink`
+    - `outlined` > transparent backgorund + boarder
+    - `retain-focus-on-click`
+    - `right`
+    - `ripple` > applies the v-ripple directive
+
   - `v-icon`
 
 ---
@@ -92,15 +124,17 @@ Example:
 
       <v-spacer></v-spacer>
 
-      <!-- Mobile burger button to open drawer menu-->
+      <!-- Mobile burger button to open drawer menu-------------->
+      <!--Show on mobile-->
       <span class="hidden-sm-and-up">
         <v-btn @click.stop="drawer = !drawer">
           <v-icon>some-icon</v-icon>
         </v-btn>
       </span>
 
-      <!-- Main nav bar -->
-      <v-toolbar-items>
+      <!-- Main nav bar ----------------------------------------->
+      <!--Hide on mobile-->
+      <v-toolbar-items class="hidden-xs-only">
         <v-btn :to="/one" text>
           <v-icon small left>some-icon</v-icon>
           Page One
@@ -112,7 +146,7 @@ Example:
       </v-toolbar-items>
     </v-app-bar>
 
-    <!-- Navigation drawer for mobile screens -->
+    <!-- Navigation drawer for mobile screens ------------------->
     <v-navigation-drawer v-model="drawer" absolute temporary right>
       <v-list>
         <v-list-item
