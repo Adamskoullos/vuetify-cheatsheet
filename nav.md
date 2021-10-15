@@ -91,7 +91,7 @@ Inside **v-app-bar** and **v-toolbar** we use the same internal components:
     - `left` > position
     - `light`
     - `link` > this is added if the button has `to` or `href`
-    - `loading` > adds a loading icon animation
+    - `loading` > adds a loading icon animation :loading="loading1" (1-5)
     - `max-height`
     - `max-width`
     - `min-height`
@@ -101,8 +101,18 @@ Inside **v-app-bar** and **v-toolbar** we use the same internal components:
     - `retain-focus-on-click`
     - `right`
     - `ripple` > applies the v-ripple directive
+    - `rounded` > border-radius
+    - `shaped` > border-radius on top left and bottom right
+    - `small`
+    - `tag`
+    - `title` > removes border-radius
+    - `top` > aligns component to the top
+    - `value` > visible or hidden
+    - `width`
+    - `x-large`
+    - `x-small`
 
-  - `v-icon`
+  - **`v-icon`**
 
 ---
 
@@ -110,9 +120,9 @@ Just outside of the **v-app-bar** we can place the **`v-navigation-drawer`**. Th
 
 `v-navigation-drawer's` by default are set to close on `click-away` events.
 
-The below example shows the `v-navigation-drawer` being used as the nav for mobile screens:
+The below example shows the `v-navigation-drawer` being used as the nav for mobile screens.
 
----
+We can use `v-list` components nicely within the `v-navigation-drawer`:
 
 Example:
 

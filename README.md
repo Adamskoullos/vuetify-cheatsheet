@@ -4,7 +4,7 @@
 - [Display & Flex](https://github.com/Adamskoullos/vuetify-cheatsheet/blob/main/flex.md)
 - [Spacing](https://github.com/Adamskoullos/vuetify-cheatsheet/blob/main/spacing.md)
 - [Layout & Grid](https://github.com/Adamskoullos/vuetify-cheatsheet/blob/main/grid.md)
-- [Navigation]()
+- [Navigation](https://github.com/Adamskoullos/vuetify-cheatsheet/blob/main/nav.md)
 - [Buttons]()
 - [Card]()
 - [Theme Configuration]()
