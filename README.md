@@ -6,5 +6,7 @@
 - [Layout & Grid](https://github.com/Adamskoullos/vuetify-cheatsheet/blob/main/grid.md)
 - [Navigation](https://github.com/Adamskoullos/vuetify-cheatsheet/blob/main/nav.md)
 - [Buttons]()
-- [Card]()
+- [lists]()
+- [Transitions]()
+- [Cards]()
 - [Theme Configuration]()
