@@ -7,6 +7,7 @@
 - [Navigation](https://github.com/Adamskoullos/vuetify-cheatsheet/blob/main/nav.md)
 - [Buttons](https://github.com/Adamskoullos/vuetify-cheatsheet/blob/main/buttons.md)
 - [Lists]()
-- [Transitions]()
+- [Forms]()
 - [Cards]()
+- [Transitions]()
 - [Theme Configuration]()
