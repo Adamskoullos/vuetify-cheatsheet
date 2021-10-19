@@ -11,7 +11,7 @@ Basic structure:
 </v-card>
 ```
 
-Example:
+Card example using a simple login form:
 
 ```html
 <v-card>
