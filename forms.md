@@ -156,31 +156,31 @@ items: [
 - `append-outer-icon`
 - `prepend-icon`
 - `prepend-inner-icon`
-- `attach`
+- `attach` > specifies which DOM element that this component should detach to
 - `autofocus`
 - `background-color`
-- `cache-items`
-- `chips`
+- `cache-items` > keeps a local unique copy of all items that have been passed through the items prop
+- `chips` > changes display of selections to chips
 - `clear-icon`
 - `clearable`
-- `counter`
+- `counter` > creates counter for input length (default 25)
 - `counter-value`
-- `deletable-chips`
+- `deletable-chips` > adds a remove icon to selected chips
 - `disable-lookup`
 - `disabled`
-- `eager`
-- `error`
-- `error-count`
-- `error-messages`
-- `filled`
-- `flat`
+- `eager` > force the components content to render on mounted
+- `error` > puts the input in a manual error state
+- `error-count` > total number of errors that should display at once
+- `error-messages` > Puts the input in an error state and passes through custom error messages
+- `filled` > filled input style
+- `flat` > removes elevation
 - `full-width`
 - `height`
 - `hide-details`
 - `hide-selected`
 - `hide-spin-buttons`
-- `hint`
-- `item-color`
+- `hint` > hint text
+- `item-color` > color of selected items
 - `item-disabled`
 - `item-text`
 - `item-value`
@@ -196,28 +196,28 @@ items: [
 }
 ```
 
-- `loading`
-- `menu-props`
-- `messages`
-- `multiple`
-- `no-data-text`
+- `loading` > displays linear progress bar
+- `menu-props` > pass props through to the v-menu component
+- `messages` > displays a list of messages or message if using a string
+- `multiple` > changes select to multiple, accepts array for value
+- `no-data-text` > display text whe there is no data
 - `open-on-clear`
 - `outlined`
 - `placeholder`
-- `prefix`
+- `prefix` > displays prefix text
 - `readonly`
 - `return-object`
 - `revers`
 - `rounded`
 - **`rules`**
 - `shaped`
-- `single-line`
+- `single-line` > label does not move on focus
 - `small-chips`
-- `solo`
-- `solo-inverted`
-- `success`
-- `success-messages`
-- `suffix`
+- `solo` > changes the style of the input
+- `solo-inverted` > reduces the opacity until focused
+- `success` > puts in success state
+- `success-messages` puts in success state and passes in success messages
+- `suffix` > displays suffix text
 - `validate-on-blur`
 - `value`
 - `value-comparator`
