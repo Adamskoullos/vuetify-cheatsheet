@@ -1,5 +1,15 @@
 # Forms
 
+- [Form](#Form)
+- [Text Input](#Text-Input)
+- [Select](#Select)
+- [Radio](#Radio)
+- [Checkbox](#Checkbox)
+- [Autocomplete](#Autocomplete)
+- [Rules and Validation](#Rules-and-Validation)
+
+---
+
 Example of a login form within a card:
 
 ```html
