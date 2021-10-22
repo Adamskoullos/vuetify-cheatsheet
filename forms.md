@@ -30,6 +30,8 @@ Example of a login form within a card:
 
 ---
 
+## Form
+
 **`v-form`**:
 
 > Props
@@ -51,6 +53,8 @@ Example of a login form within a card:
 - `submit` > emitted when form is submitted
 
 ---
+
+## Text Input
 
 **`v-text-field`**: > input element
 
@@ -127,6 +131,8 @@ nameRules: [
 - `update:error`
 
 ---
+
+## Select
 
 **`v-select`**: > drop-down
 
@@ -243,12 +249,130 @@ items: [
 
 ---
 
-**`v-radio`**:
+## Radio
+
+The `V-model` in the `v-radio-group` holds the `value` of the checked radio. In the below example `1` is set as the default, which is the value of the first radio.
+
+```html
+<v-radio-group v-model="radioGroup">
+  <v-radio v-for="n in 3" :key="n" :label="`Radio ${n}`" :value="n"></v-radio>
+</v-radio-group>
+```
+
+```js
+<script>
+  export default {
+    data () {
+      return {
+        radioGroup: 1,
+      }
+    },
+  }
+</script>
+
+```
 
 **`v-radio-group`**:
 
+> Props
+
+`v-radio-group` has many of the standard input props as well as:
+
+- `active-class` > applies active class to children when they are active
+- `max` > sets maximum number of selections that can be made
+- `multiple` > allows multiple selected items, value prop must be an array
+- `row` > displays in row
+
+> Events
+
+- `change`
+- `click:append` > when appended icon is clicked
+- `click:prepend`
+- `mousedown`
+- `mouseup`
+- `update:error`
+
+**`v-radio`**:
+
+> Props
+
+- `active-class`
+- `off-icon` > the icon used when inactive
+- `on-icon` > icon used when active
+- `ripple`
+
+> Events
+
+- `change`
+- `click`
+- `click:append` > when appended icon is clicked
+- `click:prepend`
+- `mousedown`
+- `mouseup`
+- `update:error`
+
 ---
 
-**`v-checkbox`**:
+## Checkbox
 
-**`v-simple-checkbox`**:
+A single checkbox with its own v-model data property uses true and false as its value:
+
+```html
+<template>
+  <v-container fluid>
+    <v-checkbox
+      v-model="checkbox1"
+      :label="`Checkbox 1: ${checkbox1.toString()}`"
+    ></v-checkbox>
+    <v-checkbox
+      v-model="checkbox2"
+      :label="`Checkbox 2: ${checkbox2.toString()}`"
+    ></v-checkbox>
+  </v-container>
+</template>
+```
+
+```js
+<script>
+  export default {
+    data () {
+      return {
+        checkbox1: true,
+        checkbox2: false,
+      }
+    },
+  }
+</script>
+```
+
+Multiple checkboxes using the same v-model data property `selected` which is an array so as to allow for multiple selections:
+
+```html
+<template>
+  <v-container fluid>
+    <p>{{ selected }}</p>
+    <v-checkbox v-model="selected" label="John" value="John"></v-checkbox>
+    <v-checkbox v-model="selected" label="Jacob" value="Jacob"></v-checkbox>
+  </v-container>
+</template>
+```
+
+```js
+<script>
+  export default {
+    data () {
+      return {
+        selected: ['John'],
+      }
+    },
+  }
+</script>
+```
+
+---
+
+## Autocomplete
+
+---
+
+## Rules and Validation
