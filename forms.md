@@ -383,6 +383,114 @@ Multiple checkboxes using the same v-model data property `selected` which is an 
 
 ## Autocomplete
 
+```html
+<template>
+  <v-container fluid>
+    <v-autocomplete
+      label="What is your favourite color?"
+      :items="colors"
+    ></v-autocomplete>
+  </v-container>
+</template>
+```
+
+```js
+data(){
+  return{
+    colors: ['red', 'yellow', 'blue' ],
+  }
+}
+
+```
+
 ---
 
 ## Rules and Validation
+
+1. Add the `rules` property to the input tag passing in the rules array
+2. Add the rules array as a data property in the data object
+3. Add rules functions to each rules array using the implicit passed in value
+4. Use the Vuetify built in `validate()` method to check if all rules are passed before submitting the form. See `handleLogin()` below.
+
+```html
+<v-form @submit.prevent="handleLogin" ref="loginForm">
+  <v-text-field
+    v-model="email"
+    label="Email"
+    prepend-icon="mdi-account-circle"
+    :rules="emailRules"
+  />
+  <v-text-field
+    v-model="password"
+    label="Password"
+    :type="showPass ? 'text' : 'password'"
+    prepend-icon="mdi-lock"
+    append-icon="showPass ? mdi-eye : mdi-eye-off"
+    @click:append="showPass = !showPass"
+    :rules="passwordRules"
+  />
+  <v-btn>Login</v-btn>
+</v-form>
+```
+
+```js
+
+<script>
+  export default {
+    data() {
+      return{
+        email: '',
+        password: '',
+        emailRules: [
+          value => !!value || 'Required.',
+          value => (value || '').length <= 20 || 'Max 20 characters',
+          value => {
+            const pattern = /^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/
+            return pattern.test(value) || 'Invalid e-mail.'
+          },
+        ],
+        passwordRules: [
+          value => {
+            const pattern = /^(?=.*[a-z])(?=.*[A-Z])(?=.*[0-9])(?=.*[!@#\$%\^&\*])(?=.{8,})/;
+            return pattern.test(value) || "Min. 8 characters with at least one capital letter, a number and a special character."
+          }
+        ],
+      }
+    },
+    method: {
+      handleLogin(){
+        if(this.$refs.loginForm.validate()){
+          // If all fields are validated submit form
+        }
+      }
+    },
+  }
+</script>
+```
+
+---
+
+## File Input
+
+```html
+<v-file-input
+  :rules="rules"
+  accept="image/png, image/jpeg, image/bmp"
+  placeholder="Pick an avatar"
+  prepend-icon="mdi-camera"
+  label="Avatar"
+></v-file-input>
+```
+
+```js
+
+<script>
+  export default {
+    data: () => ({
+      rules: [
+        value => !value || value.size < 2000000 || 'Avatar size should be less than 2 MB!',
+      ],
+    }),
+  }
+</script>
+```
