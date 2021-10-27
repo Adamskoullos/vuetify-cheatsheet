@@ -129,7 +129,7 @@ data: () => ({
 
 ## v-list-item
 
-The `v-list-item` tags wrap all elements for each list item and can have the prop: `teo-line` or `three-line` to style the item over a number of lines. The prop `link` can be added to turn the item into a link.
+The `v-list-item` tags wrap all elements for each list item and can have the prop: `two-line` or `three-line` to style the item over a number of lines. The prop `link` can be added to turn the item into a link.
 
 The below example shows a nice combination of `v-list-item` components within a card (not shown):
 
@@ -138,8 +138,13 @@ The below example shows a nice combination of `v-list-item` components within a 
 ```html
 <v-list subheader two-line>
   <v-subheader inset>Folders</v-subheader>
-
-  <v-list-item v-for="folder in folders" :key="folder.title">
+  <!-- Route not actually in the script but a good example of using the `link` prop and adding the `to` -->
+  <v-list-item
+    v-for="folder in folders"
+    :key="folder.title"
+    link
+    :to="folder.route"
+  >
     <v-list-item-avatar>
       <v-icon class="grey lighten-1" dark> mdi-folder </v-icon>
     </v-list-item-avatar>
