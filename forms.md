@@ -7,6 +7,7 @@
 - [Checkbox](#Checkbox)
 - [Autocomplete](#Autocomplete)
 - [Rules and Validation](#Rules-and-Validation)
+- [File Input](#File-Input)
 
 ---
 
