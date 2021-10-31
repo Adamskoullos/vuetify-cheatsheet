@@ -8,6 +8,62 @@
 
 **`v-btn-toggle`**:
 
+`v-btn-toggle` is used to wrap a related group of buttons and can be used to activate a single or multiple options:
+
+**Single**:
+
+```html
+<v-btn-toggle v-model="toggle_exclusive" mandatory>
+  <v-btn>
+    <v-icon>mdi-format-align-left</v-icon>
+  </v-btn>
+  <v-btn>
+    <v-icon>mdi-format-align-center</v-icon>
+  </v-btn>
+  <v-btn>
+    <v-icon>mdi-format-align-right</v-icon>
+  </v-btn>
+  <v-btn>
+    <v-icon>mdi-format-align-justify</v-icon>
+  </v-btn>
+</v-btn-toggle>
+```
+
+```js
+data () {
+    return {
+        toggle_exclusive: undefined,
+    }
+},
+```
+
+**Multiple**:
+
+```html
+<v-btn-toggle v-model="toggle_exclusive" multiple>
+  <v-btn>
+    <v-icon>mdi-format-align-left</v-icon>
+  </v-btn>
+  <v-btn>
+    <v-icon>mdi-format-align-center</v-icon>
+  </v-btn>
+  <v-btn>
+    <v-icon>mdi-format-align-right</v-icon>
+  </v-btn>
+  <v-btn>
+    <v-icon>mdi-format-align-justify</v-icon>
+  </v-btn>
+</v-btn-toggle>
+```
+
+```js
+data () {
+    return {
+        toggle_exclusive: [],
+    }
+},
+```
+
 - `active-class`
 - `background-color`
 - `borderless` > removes the groups border
@@ -78,6 +134,41 @@
 - `tile` > background changes from circle to square
 
 **`v-fab-transition`** tags surround a fab `v-btn` and provide a nice transition as the component is shown via a boolean data property
+
+The below example shows the `v-btn` wrapped in the `v-fab-transition` tags being controlled by the property `hidden`:
+
+```html
+<v-fab-transition>
+  <v-btn v-show="!hidden" color="pink" dark absolute top right fab>
+    <v-icon>mdi-plus</v-icon>
+  </v-btn>
+</v-fab-transition>
+```
+
+The above sets the fab absolutely in the top right:
+
+![Screenshot from 2021-10-31 08-02-09](https://user-images.githubusercontent.com/73107656/139573843-fb6e61ea-8c36-44f4-b44e-2272bca6333c.png)
+
+The next example sets the fab in the bottom left, but without the absolute prop:
+
+```html
+<v-fab-transition>
+  <v-btn
+    :key="activeFab.icon"
+    :color="activeFab.color"
+    fab
+    large
+    dark
+    bottom
+    left
+    class="v-btn--example"
+  >
+    <v-icon>{{ activeFab.icon }}</v-icon>
+  </v-btn>
+</v-fab-transition>
+```
+
+![Screenshot from 2021-10-31 08-02-34](https://user-images.githubusercontent.com/73107656/139573899-0720141d-6d9d-43f3-abf7-16bbcdf0fb73.png)
 
 **`v-speed-dial`** > a cool drop down component for fab buttons
 
