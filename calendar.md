@@ -163,7 +163,7 @@ Section 2 shows the `v-sheet` that contains the `v-calendar`. The below example 
 </v-row>
 ```
 
-Lastly for the overview this calendar component comes with a decent amount of properties and functions to go through:
+Lastly for the overview this calendar component comes with a decent amount of properties and functions via the `v-calendar` api. Below is the script for the example above:
 
 ```js
 data: () => ({
@@ -175,9 +175,9 @@ data: () => ({
     day: 'Day',
     '4day': '4 Days',
   },
-  selectedEvent: {},
-  selectedElement: null,
-  selectedOpen: false,
+  selectedEvent: {}, // showEvent passes in the event object and assigns value as the selectedEvent
+  selectedElement: null, // showEvent also passes in the native event where we can grab the element (e.target)
+  selectedOpen: false, // showEvent also sets selectedOpen to true
   events: [],
   colors: ['blue', 'indigo', 'deep-purple', 'cyan', 'green', 'orange', 'grey darken-1'],
   names: ['Meeting', 'Holiday', 'PTO', 'Travel', 'Event', 'Birthday', 'Conference', 'Party'],
@@ -202,6 +202,7 @@ methods: {
   next () {
     this.$refs.calendar.next()
   },
+  // Click on an event to open the dialog event pop up box
   showEvent ({ nativeEvent, event }) {
     const open = () => {
       this.selectedEvent = event
