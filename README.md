@@ -9,4 +9,4 @@
 - [Cards](https://github.com/Adamskoullos/vuetify-cheatsheet/blob/main/cards.md)
 - [Lists](https://github.com/Adamskoullos/vuetify-cheatsheet/blob/main/lists.md)
 - [Forms](https://github.com/Adamskoullos/vuetify-cheatsheet/blob/main/forms.md)
-- [Calendar]()
+- [Calendar](https://github.com/Adamskoullos/vuetify-cheatsheet/blob/main/calendar.md)
