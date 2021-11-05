@@ -167,8 +167,8 @@ Lastly for the overview this calendar component comes with a decent amount of pr
 
 ```js
 data: () => ({
-  focus: '',
-  type: 'month',
+  focus: '', // Set day to focus in on
+  type: 'month', // Set the view (day, week, month etc)
   typeToLabel: {
     month: 'Month',
     week: 'Week',
@@ -186,6 +186,7 @@ mounted () {
   this.$refs.calendar.checkChange()
 },
 methods: {
+  // Click on a date to view that day
   viewDay ({ date }) {
     this.focus = date
     this.type = 'day'
@@ -251,3 +252,11 @@ methods: {
 },
 
 ```
+
+## CRUD Events
+
+**Create new event**:
+
+**Update event**:
+
+**Delete event**:
