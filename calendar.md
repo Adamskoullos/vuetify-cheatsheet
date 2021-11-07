@@ -253,10 +253,12 @@ methods: {
 
 ```
 
-## CRUD Events
+## Event Properties
 
-**Create new event**:
+Each calendar event has the following object properties:
 
-**Update event**:
-
-**Delete event**:
+1. Name: This is the title that is shown on the card
+2. Details: This is the meat of the event only shown on the dialog box
+3. Start: Date and potential time
+4. Finish: Date and potential time
+5. Color: This is the event color that is shown on the card and dialog header
