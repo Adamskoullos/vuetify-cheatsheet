@@ -10,3 +10,4 @@
 - [Lists](https://github.com/Adamskoullos/vuetify-cheatsheet/blob/main/lists.md)
 - [Forms](https://github.com/Adamskoullos/vuetify-cheatsheet/blob/main/forms.md)
 - [Calendar](https://github.com/Adamskoullos/vuetify-cheatsheet/blob/main/calendar.md)
+- [Vuetify-DIalog](https://github.com/yariksav/vuetify-dialog) > Link to docs
